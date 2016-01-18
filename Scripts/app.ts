@@ -29,6 +29,7 @@ document.body.innerHTML = greeter(user);
 module toDoApp {
     'use strict';
 
-    var toDo = angular.module('toDoApp', []);
+    var toDo = angular.module('toDoApp', [])
+    .controller('todo_controller', todo_controller);
     
 }

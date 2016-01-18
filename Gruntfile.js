@@ -3,7 +3,12 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		typescript: {
 			base: {
-			src: ['./Scripts/**/*.ts'],
+			src: ['./Scripts/app.ts', 
+				'./Scripts/_all.ts',
+				'./Scripts/Controllers/**/*.ts',
+				'./Scripts/Interfaces/**/*.ts',
+				'./Scripts/libs/**/*.ts',
+				'./Scripts/Models/**/*.ts'],
 			dest: './Components/app.js',
 			options: {
 				module: 'amd',
@@ -26,7 +31,9 @@ module.exports = function(grunt) {
 			},
 			css:{
 				src:[
-						'./node_modules/bootstrap/dist/css/bootstrap.min.css'
+						'./node_modules/bootstrap/dist/css/bootstrap.min.css',
+						'./node_modules/font-awesome/css/font-awesome.min.css',
+						'./Style/style.css'
 					],
 					dest: './Components/app.css'
 			}
